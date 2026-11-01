@@ -1,0 +1,44 @@
+# Copy to config.yaml (git-ignored) and fill in. Values replace the
+# {{PLACEHOLDERS}} in prompts/. Never commit real keys or ids.
+
+owner_name: "Your Name"
+timezone: "America/Los_Angeles"
+schedule: "37 4 * * 1"        # off the hour, so runs are not delayed by traffic
+
+sheet:
+  name: "Job search"
+  id: "YOUR_SPREADSHEET_ID"
+  tabs:                        # sheetId of each tab (from the tab's URL gid)
+    pipeline: 0
+    recruiters: 0
+    shortlist: 0
+    watchlist: 0
+    new_raises: 0
+    companies: 0
+    dead_ends: 0
+
+email:
+  lookback_days: 8             # a little over the schedule interval
+
+scope:
+  target_roles: >-
+    smart contract, protocol, backend, full-stack, AI and ML engineering
+  target_levels: "senior, staff, principal, or no level"
+  allowed_locations: "remote with US eligibility, or US"
+  excluded_regions: "regions outside your working hours"
+  excluded_company_types: "staffing agencies, and anything on Dead Ends"
+  tier_rules: >-
+    Tier 1 = your core specialty; Tier 2 = adjacent roles at target companies;
+    Tier 3 = general roles elsewhere, tagged at the start of Why it fits
+  raise_filter: >-
+    US or US-remote software companies, pre-seed to growth equity rounds,
+    $5M or more or undisclosed
+
+sources:
+  a_url: "https://web3.career/api/v1?token=TOKEN&tag=TAG&remote=true&limit=100"
+  not_used: "list sources you tried and why you dropped them"
+
+extra_rules: ""
+
+# Keys go only in the scheduled task's text, not here and not in git.
+keys_block: "web3.career token: <in task only>; CoinMarketCap key: <in task only>"

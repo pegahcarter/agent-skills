@@ -1,0 +1,5 @@
+config.yaml
+exports/
+*.csv
+__pycache__/
+.env
