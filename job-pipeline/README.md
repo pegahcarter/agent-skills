@@ -92,9 +92,14 @@ Paths are relative to this folder.
 
 ## Setup
 
-Install the skill first: the `job-pipeline@pegahcarter` plugin, or this
-folder copied to `~/.claude/skills/job-pipeline`. Steps for both are in the
-[repo README](../README.md#install).
+Install the skill first. In Claude Code (2.1.275 or later), run:
+
+```
+/plugin install job-pipeline --marketplace pegahcarter/agent-skills
+```
+
+Or copy this folder to `~/.claude/skills/job-pipeline`. Steps for each are in
+the [repo README](../README.md#install).
 
 1. Make a Google Sheet with the tabs in `schema/sheet.md`. Put a one-paragraph
    description in row 1 of each tab and the column headers in row 2.
@@ -137,4 +142,4 @@ Both scripts use only the Python standard library.
 
 ## License
 
-MIT. See [`LICENSE`](../LICENSE) at the repo root.
+MIT. See [`LICENSE`](LICENSE).

@@ -24,7 +24,8 @@ Claude Code). The itinerary and tracker paths come from `config.yaml`.
 - Trackers (hotels, restaurants, producers) hold detail. Columns:
   `schema/trackers.md`. Empty templates: `templates/`.
 - `config.yaml` holds the travelers' constraints. Read it at the start. Fields:
-  `config.example.yaml`.
+  `config.example.yaml`. It sits in this folder for a folder install. For a
+  plugin install it is wherever the user keeps it; ask if you cannot find it.
 
 Never edit a read-only original in place. Copy it to a working location, edit
 the copy, and hand the copy back.
