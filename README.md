@@ -1,5 +1,7 @@
 # agent-skills
 
+[![CI](https://github.com/pegahcarter/agent-skills/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/pegahcarter/agent-skills/actions/workflows/ci.yml)
+
 Claude skills built from real projects. Each skill has its own folder with
 prompts, schemas, field notes from actual use, and scripts that use only the
 Python standard library and come with tests. No folder holds personal data:
