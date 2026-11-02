@@ -10,8 +10,10 @@ the user's sheet. Your job is to set up or run the agents, keep the sheet
 correct, and say what still needs the user.
 
 Paths to `prompts/`, `schema/`, `sources/` and `scripts/` are relative to this
-skill's folder (`${CLAUDE_SKILL_DIR}` in Claude Code). `config.yaml` sits in
-the same folder. Its fields are listed in `config.example.yaml`.
+skill's folder (`${CLAUDE_SKILL_DIR}` in Claude Code). `config.yaml` is the
+user's copy of `config.example.yaml`. It sits in this folder for a folder
+install. For a plugin install it is wherever the user keeps it; ask if you
+cannot find it.
 
 ## The two agents
 

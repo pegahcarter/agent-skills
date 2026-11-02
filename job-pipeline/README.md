@@ -92,6 +92,10 @@ Paths are relative to this folder.
 
 ## Setup
 
+Install the skill first: the `job-pipeline@pegahcarter` plugin, or this
+folder copied to `~/.claude/skills/job-pipeline`. Steps for both are in the
+[repo README](../README.md#install).
+
 1. Make a Google Sheet with the tabs in `schema/sheet.md`. Put a one-paragraph
    description in row 1 of each tab and the column headers in row 2.
 2. Copy `config.example.yaml` to `config.yaml` (the repo's root `.gitignore` ignores it) and fill

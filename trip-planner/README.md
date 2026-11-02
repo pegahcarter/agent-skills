@@ -103,8 +103,8 @@ Paths are relative to this folder.
 
 ## Setup
 
-1. Install the skill. For Claude Code, copy or symlink this folder to
-   `~/.claude/skills/trip-planner`. For the Claude app, zip this folder and
+1. Install the skill. For Claude Code, install the `trip-planner@pegahcarter`
+   plugin, or copy or symlink this folder to `~/.claude/skills/trip-planner`. For the Claude app, zip this folder and
    add it as a custom skill. Steps for both are in the
    [repo README](../README.md#install).
 2. Copy `config.example.yaml` to `config.yaml` (the repo's root `.gitignore` ignores it) and fill in your

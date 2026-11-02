@@ -11,18 +11,34 @@ you bring your own config, sheets and files.
 |---|---|
 | [job-pipeline](job-pipeline/) | Two scheduled agents that sync job-search email and refresh job and funding leads into one Google Sheet. |
 | [trip-planner](trip-planner/) | Plans a multi-week road trip from one itinerary file, with trackers for hotels, restaurants and producers. |
-| [forge-attest](https://github.com/crossecute/forge-attest) | Builds Gnosis Safe transactions as Forge scripts and proves the queued transaction is their output. Kept in its own repo. |
+| [forge-attest](https://github.com/crossecute/forge-attest) | Builds Gnosis Safe transactions as Forge scripts and proves the queued transaction is their output. Lives in its own repo. |
 
-forge-attest is a Claude Code plugin, not a folder in this repo. Its skills
-run scripts from the plugin's own root, so install it as its repo's README
-describes rather than copying files.
+forge-attest is not a folder in this repo. It is a Claude Code plugin with
+two skills that run scripts from the plugin's own root, so it installs as a
+plugin only. This repo's marketplace points to its default branch. To pin a
+reviewed commit, follow its README instead.
 
 ## Install
 
-Each folder in this repo is one skill and works on its own. Install only the
-ones you want.
+Install only the skills you want. Each one works on its own.
 
-**Claude Code.** Copy or symlink one skill folder into `~/.claude/skills/`:
+**Claude Code, as plugins.** This repo is a plugin marketplace named
+`pegahcarter`. Add it once, then install any of the three:
+
+```bash
+claude plugin marketplace add pegahcarter/agent-skills
+```
+
+```bash
+claude plugin install trip-planner@pegahcarter
+```
+
+The other two are `job-pipeline@pegahcarter` and `forge-attest@pegahcarter`.
+Claude Code keeps the installed copy in its plugin cache and replaces it on
+update, so keep your `config.yaml` outside it and tell the skill where it is.
+
+**Claude Code, as a folder.** Copy or symlink one skill folder into
+`~/.claude/skills/`:
 
 ```bash
 cp -r trip-planner ~/.claude/skills/trip-planner
