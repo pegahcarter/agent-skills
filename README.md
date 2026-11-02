@@ -69,6 +69,20 @@ Then go to Customize > Skills, click "+", choose "Create skill", then
 job-pipeline also runs as two scheduled tasks, one per agent. Setup steps are
 in [job-pipeline/README.md](job-pipeline/README.md#setup).
 
+## Tests
+
+Run both offline test suites from the repo root. No extra packages, API keys
+or personal config are needed:
+
+```bash
+python3 -m unittest discover -s job-pipeline/tests -v
+python3 -m unittest discover -s trip-planner/tests -v
+```
+
+[CI](.github/workflows/ci.yml) runs each skill's tests separately on Python
+3.11 and 3.14 for every push and pull request. It can also be run manually
+from GitHub Actions.
+
 ## License
 
 MIT. See [LICENSE](LICENSE). Each skill folder carries its own copy, so the
