@@ -1,4 +1,4 @@
-# agent-job-pipeline
+# job-pipeline
 
 A job search run by two scheduled AI agents, with a Google Sheet as the only record.
 
@@ -8,7 +8,7 @@ on the employer's own job board, and adds what fits. Both write to the same
 sheet, both record what they checked and when, and both stop and tell you when
 something they depend on is down.
 
-This repo holds the prompts, the sheet layout, a catalog of free sources with
+This skill holds the prompts, the sheet layout, a catalog of free sources with
 their quirks, and two small scripts the agents call from a shell. It contains no
 data. You bring your own sheet, email account and search criteria.
 
@@ -74,10 +74,13 @@ These are the parts worth copying even if you use none of the prompts.
 10. **Short reports.** One message: what changed, what is due, what needs your
     decision.
 
-## Repo layout
+## Layout
+
+Paths are relative to this folder.
 
 | Path | What it is |
 |---|---|
+| `SKILL.md` | Skill entry point: what the agents do, rules, which prompt to use |
 | `prompts/email-sync.md` | Prompt for the email agent |
 | `prompts/data-refresh.md` | Prompt for the data agent |
 | `schema/sheet.md` | Tabs, columns and the row 1 provenance format |
@@ -91,7 +94,7 @@ These are the parts worth copying even if you use none of the prompts.
 
 1. Make a Google Sheet with the tabs in `schema/sheet.md`. Put a one-paragraph
    description in row 1 of each tab and the column headers in row 2.
-2. Copy `config.example.yaml` to `config.yaml` (it is in `.gitignore`) and fill
+2. Copy `config.example.yaml` to `config.yaml` (the repo's root `.gitignore` ignores it) and fill
    it in: sheet id, tab ids, time zone, target roles, regions to skip, and any
    free API keys you have.
 3. Fill the placeholders in both prompts from your config. Put API keys only in
@@ -130,4 +133,4 @@ Both scripts use only the Python standard library.
 
 ## License
 
-MIT. See `LICENSE`.
+MIT. See [`LICENSE`](../LICENSE) at the repo root.
