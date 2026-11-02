@@ -1,6 +1,6 @@
 ---
 name: trip-planner
-description: Plan and maintain a multi-week road trip with one itinerary file as the source of truth and trackers for hotels, restaurants and producers. Use when the user is planning a trip, asks to research hotels, restaurants, wineries or other producers for specific dates, wants to draft emails to businesses abroad, or asks to check an itinerary for date, closure or booking problems.
+description: Use when planning a multi-week trip, to find hotels, restaurants, wineries or other producers for given dates, draft emails to businesses abroad, or check an itinerary for date or closure problems.
 ---
 
 # Trip planner
