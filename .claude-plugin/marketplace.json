@@ -1,0 +1,33 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "pegahcarter",
+  "description": "Claude skills built from real projects. Each plugin installs on its own.",
+  "owner": {
+    "name": "Carter Carlson"
+  },
+  "plugins": [
+    {
+      "name": "job-pipeline",
+      "source": "./job-pipeline",
+      "description": "Two scheduled agents that sync job-search email and refresh job and funding leads into one Google Sheet.",
+      "license": "MIT",
+      "category": "productivity"
+    },
+    {
+      "name": "trip-planner",
+      "source": "./trip-planner",
+      "description": "Plans a multi-week road trip from one itinerary file, with trackers for hotels, restaurants and producers.",
+      "license": "MIT",
+      "category": "productivity"
+    },
+    {
+      "name": "forge-attest",
+      "source": {
+        "source": "github",
+        "repo": "crossecute/forge-attest"
+      },
+      "description": "Builds Gnosis Safe transactions as Forge scripts and proves the queued transaction is their output.",
+      "category": "security"
+    }
+  ]
+}

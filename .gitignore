@@ -1,5 +1,9 @@
+# Applies inside every skill folder.
 config.yaml
 exports/
+trips/
 *.csv
+!**/templates/*.csv
+*.xlsx
 __pycache__/
 .env

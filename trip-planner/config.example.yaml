@@ -1,0 +1,46 @@
+# Copy to config.yaml (git-ignored) and fill in. The agent reads this at the
+# start of every task. Nothing here should be private: no confirmation numbers,
+# card details or passport data.
+
+trip:
+  name: "Italy 2026"
+  itinerary: "trips/italy-2026/itinerary.md"
+  trackers:
+    hotels: "trips/italy-2026/hotels.xlsx"
+    restaurants: "trips/italy-2026/restaurants.xlsx"
+    producers: "trips/italy-2026/producers.xlsx"
+  party: 2
+  home_airport: "LAX"
+  transport: "rental car, plus ferries and local buses"
+
+constraints:
+  # Hard rules. A suggestion that breaks one is dropped.
+  blocked_windows:
+    - "mornings until about noon (workout)"
+  skip_activities:
+    - "snorkeling"
+  beach_criteria: "swimming, sand, scenery, few people"
+  gym: "treadmill required; access at 05:00 preferred"
+  repeats_ok: "places from a previous trip are fine"
+
+restaurants:
+  meals: "dinner only"
+  budget_per_person: "under 50 EUR"
+  min_rating: 4.0
+  rating_sources: ["TripAdvisor", "Google"]
+  exclude: "strictly vegetarian or vegan places; sea urchin"
+  distance: "walking distance from the hotel preferred"
+
+producers:
+  interests: ["wine", "cheese", "cured fish", "figs", "olive oil", "spirits"]
+  bringing_home: true          # turns on the customs check
+
+correspondence:
+  local_language: "Italian"
+  sign_off: "Your initials"
+  max_questions: 3
+
+local_search_terms:
+  - "orari apertura"           # opening hours
+  - "vendita diretta"          # direct sales
+  - "visita degustazione"      # tasting visit
