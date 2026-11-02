@@ -1,5 +1,7 @@
 # agent-skills
 
+[![CI](https://github.com/pegahcarter/agent-skills/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/pegahcarter/agent-skills/actions/workflows/ci.yml)
+
 Claude skills built from real projects. Each skill has its own folder with
 prompts, schemas, field notes from actual use, and scripts that use only the
 Python standard library and come with tests. No folder holds personal data:
@@ -68,6 +70,25 @@ Then go to Customize > Skills, click "+", choose "Create skill", then
 
 job-pipeline also runs as two scheduled tasks, one per agent. Setup steps are
 in [job-pipeline/README.md](job-pipeline/README.md#setup).
+
+## Tests
+
+Run both offline test suites from the repo root. No extra packages, API keys
+or personal config are needed:
+
+```bash
+python3 -m unittest discover -s job-pipeline/tests -v
+python3 -m unittest discover -s trip-planner/tests -v
+```
+
+[CI](.github/workflows/ci.yml) runs each skill's tests separately on Python
+3.11 and 3.14 for every push and pull request. It can also be run manually
+from GitHub Actions.
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for change guidelines, validation
+commands and pull request rules.
 
 ## License
 
