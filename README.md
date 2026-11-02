@@ -83,6 +83,11 @@ python3 -m unittest discover -s trip-planner/tests -v
 3.11 and 3.14 for every push and pull request. It can also be run manually
 from GitHub Actions.
 
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for change guidelines, validation
+commands and pull request rules.
+
 ## License
 
 MIT. See [LICENSE](LICENSE). Each skill folder carries its own copy, so the
