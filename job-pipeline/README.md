@@ -137,4 +137,4 @@ Both scripts use only the Python standard library.
 
 ## License
 
-MIT. See [`LICENSE`](../LICENSE) at the repo root.
+MIT. See [`LICENSE`](LICENSE).

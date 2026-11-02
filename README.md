@@ -71,4 +71,5 @@ in [job-pipeline/README.md](job-pipeline/README.md#setup).
 
 ## License
 
-MIT. See [LICENSE](LICENSE).
+MIT. See [LICENSE](LICENSE). Each skill folder carries its own copy, so the
+notice stays with a skill that is installed or copied alone.
