@@ -103,12 +103,17 @@ Paths are relative to this folder.
 
 ## Setup
 
-1. Install the skill. For Claude Code, install the `trip-planner@pegahcarter`
-   plugin, or copy or symlink this folder to `~/.claude/skills/trip-planner`. For the Claude app, zip this folder and
-   add it as a custom skill. Steps for both are in the
-   [repo README](../README.md#install).
-2. Copy `config.example.yaml` to `config.yaml` (the repo's root `.gitignore` ignores it) and fill in your
-   constraints and language.
+1. Install the skill. In Claude Code (2.1.275 or later), run:
+
+   ```
+   /plugin install trip-planner --marketplace pegahcarter/agent-skills
+   ```
+
+   Or copy or symlink this folder to `~/.claude/skills/trip-planner`. For the
+   Claude app, zip this folder and add it as a custom skill. Steps for each
+   are in the [repo README](../README.md#install).
+2. Copy `config.example.yaml` to `config.yaml` (the repo's root `.gitignore`
+   ignores it) and fill in your constraints and language.
 3. Start an itinerary from `schema/itinerary.md`, or give the agent a rough
    plan and ask it to put it in the format. Copy the CSVs in `templates/` to
    start the trackers, or use .xlsx or a Google Sheet with the same columns.
